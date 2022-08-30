@@ -21,7 +21,28 @@ const navigation = [
 function navbar() {
    return (
       <div>
-         NAVIGATION
+         <nav className='bg-slate-50'>
+         <div className="mx-auto items-center max-w-8xl px-2 sm:px-6 lg:px-8">
+            <div className="relative flex h-14 items-center">
+               <div className='px-12'>Bundesliga</div>
+               <div className='flex items-center space-x-2'>
+                  {navigation.map((link, index) => {
+                     return (
+                     <ul className='text-gray-400 px-3 py-2 text-xs font-light' key={index}>
+                        <Link href={link.href}>
+                           <li key={index}>{link.name}</li>
+                        </Link>
+                     </ul>
+                     ); 
+                  })}
+               </div>
+
+               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                  P
+               </div>
+            </div>
+         </div>
+         </nav>
       </div>
    )
 }
