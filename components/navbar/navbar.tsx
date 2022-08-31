@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
+import Image from 'next/image'
+import { VscAccount } from 'react-icons/vsc'
+import logo  from '../../public/bundesliga_pos.svg'
 
 //todo: appropriate font and logo with optimized Next/Image
 
@@ -19,23 +22,21 @@ const navigation = [
    { name: 'Players', href: '#', current: false },
 ]
 
-const myLoader = () => {
-   return `https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80`;
-}
-
 function classNames(...classes: any[]) {
    return classes.filter(Boolean).join(' ')
 }
 
 function navbar() {
    return (
-      <Disclosure as='nav' className='bg-white drop-shadow-sm py-2'>
+      <Disclosure as='nav' className='bg-white drop-shadow-sm py-2 md:py-1'>
          {({ open }) => (
             <>
-            <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-36">
+            <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-9">
                <div className="relative flex h-14 items-center justify-between">
                      <div className="flex flex-shrink-0 items-center">
-                           <div className='text-lg md:text-lg'>Bundesliga</div>
+                        <a href="#">
+                           <Image src={logo} width={180} height={40} alt=''/>
+                        </a>
                      </div>
                      <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
                         <div className='hidden relative sm:ml-6 sm:block'>
@@ -46,7 +47,7 @@ function navbar() {
                                  href={item.href}
                                  className={classNames(
                                     item.current ? 'text-gray-800' : 'text-gray-500',
-                                    'px-2 md:px-1 text-xs md:text-xs font-light decoration-2 hover:text-gray-800 hover:underline hover:underline-offset-8 md:hover:underline-offset-4'
+                                    'px-2 md:px-1 text-xs md:text-sm font-light md:font-normal decoration-2 hover:text-gray-800 hover:underline hover:underline-offset-8 md:hover:underline-offset-4'
                                  )}
                                  aria-current={item.current ? 'page' : undefined}
                               >
@@ -63,16 +64,10 @@ function navbar() {
                            <Menu.Button 
                               className='
                                  flex rounded-full 
-                                 hover:outline-none hover:ring-2 
-                                 hover:ring-white hover:ring-offset-2 
-                                 hover:ring-offset-gray-800'
+                                 focus:ring-offset-gray-800'
                               >
-                              <span className="sr-only">Open user menu</span>
-                              <img
-                                 className="h-8 w-8 rounded-full"
-                                 src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-                                 alt='Profile Image'
-                              />
+                              <span className='sr-only'>Open user menu</span>
+                              <VscAccount className='h-6 w-6 fill-gray-500 rounded-full'/>
                            </Menu.Button>
                         </div>
                         <Transition
