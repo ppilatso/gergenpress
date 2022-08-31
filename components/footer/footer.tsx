@@ -4,7 +4,9 @@ import Styles from './footer.module.css'
 
 function footer() {
    return (
-      <div>footer</div>
+      <>
+         
+      </>
    )
 }
 
