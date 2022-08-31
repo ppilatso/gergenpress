@@ -2,8 +2,6 @@
 import React, { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 
-//todo: fix menu button on hover highlight
-//todo: underline nav item on hover
 //todo: appropriate font and logo with optimized Next/Image
 
 const navigation = [
@@ -31,13 +29,13 @@ function classNames(...classes: any[]) {
 
 function navbar() {
    return (
-      <Disclosure as='nav' className='bg-white drop-shadow-sm'>
+      <Disclosure as='nav' className='bg-white drop-shadow-sm py-2'>
          {({ open }) => (
             <>
             <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-36">
                <div className="relative flex h-14 items-center justify-between">
                      <div className="flex flex-shrink-0 items-center">
-                           <h2>Bundesliga</h2>
+                           <div className='text-lg md:text-lg'>Bundesliga</div>
                      </div>
                      <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
                         <div className='hidden relative sm:ml-6 sm:block'>
@@ -47,8 +45,8 @@ function navbar() {
                                  key={item.name}
                                  href={item.href}
                                  className={classNames(
-                                    item.current ? 'text-gray-500' : 'text-gray-500',
-                                    'px-2 py-2 rounded-md text-xs md:text-sm font-light'
+                                    item.current ? 'text-gray-800' : 'text-gray-500',
+                                    'px-2 md:px-1 text-xs md:text-xs font-light decoration-2 hover:text-gray-800 hover:underline hover:underline-offset-8 md:hover:underline-offset-4'
                                  )}
                                  aria-current={item.current ? 'page' : undefined}
                               >
@@ -65,8 +63,8 @@ function navbar() {
                            <Menu.Button 
                               className='
                                  flex rounded-full 
-                                 hover:outline-none focus:ring-2 
-                                 hover:ring-white focus:ring-offset-2 
+                                 hover:outline-none hover:ring-2 
+                                 hover:ring-white hover:ring-offset-2 
                                  hover:ring-offset-gray-800'
                               >
                               <span className="sr-only">Open user menu</span>
