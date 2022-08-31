@@ -35,13 +35,13 @@ function navbar() {
          {({ open }) => (
             <>
             <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-36">
-               <div className="relative flex h-16 items-center justify-between">
-                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                        <div className="flex flex-shrink-0 items-center">
+               <div className="relative flex h-14 items-center justify-between">
+                     <div className="flex flex-shrink-0 items-center">
                            <h2>Bundesliga</h2>
-                        </div>
-                        <div className='hidden mx-auto lg:px-48 sm:ml-6 sm:block'>
-                           <div className='flex space-x-4'>
+                     </div>
+                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
+                        <div className='hidden relative sm:ml-6 sm:block'>
+                           <div className='flex space-x-2'>
                            {navigation.map((item) => (
                               <a
                                  key={item.name}
