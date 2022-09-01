@@ -29,14 +29,14 @@ function navbar() {
       <Disclosure as='nav' className='bg-white drop-shadow-sm py-2 md:py-1'>
          {({ open }) => (
             <>
-            <div className='mx-auto max-w-8xl px-2 sm:px-6 lg:px-9 2xl:px-60'>
+            <div className='mx-auto max-w-8xl sm:px-6 lg:px-9 2xl:px-60'>
                <div className='relative flex h-14 items-center justify-center'>
                   <div className='flex flex-shrink-0 items-center pt-3'>
                      <a href="#">
                         <Image src={logo} width={160} height={40} alt=''/>
                      </a>
                   </div>
-                  <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
+                  <div className="flex flex-1 items-center justify-center">
                      <div className='hidden relative sm:ml-6 sm:block'>
                         <div className='flex space-x-2'>
                         {navigation.map((item) => (
