@@ -31,9 +31,9 @@ function footer() {
                      href={item.href}
                      className={classNames(
                         item.current ? 'text-gray-500' : 'text-gray-500',
-                        'px-2 md:px-1 text-sm font-light'
+                        'px-2 md:px-1 text-sm md:text-xs font-light'
                      )}>
-                        {item.name} <span className='px-2 text-sm font-bold'>&#183;</span>
+                        {item.name} <span className='px-2 md:px-1 text-sm font-bold'>&#183;</span>
                      </a>
                ))}
             </div>
