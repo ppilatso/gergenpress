@@ -2,9 +2,6 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import topLogo from '../public/bundeliga_fan_logo.png'
 
-//todo center Smaller text coorectly
-//todo center the buttons corectly and style 
-
 const Home: NextPage = () => {
   return (
     <div className='bg-gray-100 p-4'>
@@ -20,12 +17,17 @@ const Home: NextPage = () => {
             <div className='text-5xl font-black pt-2'>
               Your team - your game
             </div>
-            <div className='pl-14 text-xl font-medium pt-2'>
-              Play the official Bundesliga Fantasy Manager
+            <div className='flex'>
+              <div className='mx-auto text-xl font-medium pt-2'>
+                Play the official Bundesliga Fantasy Manager
+              </div>
             </div>
-            <div className='grid grid-cols-2 gap-0 pt-8'>
-              <button className='outline outline-offset-2 outline-2 p-2 w-32' >Login</button>
-              <button className='outline outline-offset-2 outline-2 p-2 w-32'>Register</button>
+            <div className='flex pt-8'>
+              <div className='mx-auto'>
+                <button className='text-sm bg-black hover:bg-white text-white hover:text-black outline outline-black outline-2 p-2 w-32' >LOGIN</button>
+                <span className='px-4'></span>
+                <button className='text-sm hover:bg-black hover:text-white outline outline-2 hover:outline-black p-2 w-32'>REGISTER</button>
+              </div>
             </div>
           </div>
       </div>
