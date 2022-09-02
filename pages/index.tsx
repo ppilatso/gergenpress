@@ -1,8 +1,10 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
+
 import topLogo from '../public/bundeliga_fan_logo.png'
 import playeBanner from '../public/budensliga_player_banner.png'
 import playerCards from '../public/player_cards.png'
+import phonelinks from '../public/phone_links.jpg';
 
 const Home: NextPage = () => {
   return (
@@ -33,7 +35,7 @@ const Home: NextPage = () => {
             </div>
           </div>
       </div>
-      <div className='flex relative mx-auto max-w-7xl'>
+      <div className='relative mx-auto max-w-7xl'>
         <div className='self-center'>
           <Image 
             src={playeBanner}
@@ -42,14 +44,47 @@ const Home: NextPage = () => {
             alt='player banner'/>
         </div>
 
-        <div className='absolute -bottom-16 left-1/3 self-end z-10'>
+        <div className='absolute -bottom-16 left-1/3 z-10'>
           <Image
             src={playerCards}
             width={400}
             height={150}
             alt=''/>
         </div>
+      </div>
 
+      <div className='relative -top-2'>
+          <div className='mx-auto max-w-7xl'>
+            <Image 
+              src={phonelinks}
+              width={3000}
+              height={2000}
+              alt='player banner'/>
+          </div>
+
+          <div className='justify-self-center absolute top-16 right-1/4'>
+            <div className='flex text-4xl font-extrabold'>
+              Download the App
+            </div>
+
+            <div className='flex'>
+              <div className='mx-auto text-sm font-normal pt-2'>
+                  Your dreamteam always in your pocket
+              </div>
+            </div>
+
+            <div className='flex pt-8'>
+              <div className='mx-auto'>
+                <a className='text-xs font-bold bg-black text-white hover:underline hover:text-gray-300 outline-2 p-3' >
+                  APP STORE
+                </a>
+                <span className='px-4'></span>
+                <a className='text-xs font-bold bg-black text-white hover:underline hover:text-gray-300 outline-2 p-3'>
+                  GOOGLE PLAY
+                </a>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
   )
