@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import topLogo from '../public/bundeliga_fan_logo.png'
+import playeBanner from '../public/budensliga_player_banner.png'
 
 const Home: NextPage = () => {
   return (
@@ -31,6 +32,14 @@ const Home: NextPage = () => {
             </div>
           </div>
       </div>
+        <div className='mx-auto max-w-7xl'>
+          <Image 
+            src={playeBanner}
+            width={3000}
+            height={1000}
+            alt='player banner'
+            className='items-center justify-center'/>
+        </div>
     </div>
   )
 }
