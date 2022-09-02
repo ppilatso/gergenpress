@@ -2,10 +2,11 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import topLogo from '../public/bundeliga_fan_logo.png'
 import playeBanner from '../public/budensliga_player_banner.png'
+import playerCards from '../public/player_cards.png'
 
 const Home: NextPage = () => {
   return (
-    <div className='bg-gray-100 p-4'>
+    <div className='bg-gray-100 p-4 pt-20'>
       <div className='grid grid-rows-2 gap-4'>
           <div className='justify-self-center'>
             <Image 
@@ -32,14 +33,24 @@ const Home: NextPage = () => {
             </div>
           </div>
       </div>
-        <div className='mx-auto max-w-7xl'>
+      <div className='flex relative mx-auto max-w-7xl'>
+        <div className='self-center'>
           <Image 
             src={playeBanner}
             width={3000}
             height={1000}
-            alt='player banner'
-            className='items-center justify-center'/>
+            alt='player banner'/>
         </div>
+
+        <div className='absolute -bottom-16 left-1/3 self-end z-10'>
+          <Image
+            src={playerCards}
+            width={400}
+            height={150}
+            alt=''/>
+        </div>
+
+      </div>
     </div>
   )
 }

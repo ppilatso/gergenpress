@@ -26,7 +26,7 @@ function classNames(...classes: any[]) {
 
 function navbar() {
    return (
-      <Disclosure as='nav' className='bg-white drop-shadow-sm py-2 md:py-1'>
+      <Disclosure as='nav' className='bg-white drop-shadow-md py-2 md:py-1 z-50 fixed w-full'>
          {({ open }) => (
             <>
             <div className='mx-auto max-w-8xl sm:px-6 lg:px-9 2xl:px-60'>
