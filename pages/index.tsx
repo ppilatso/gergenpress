@@ -5,6 +5,9 @@ import topLogo from '../public/bundeliga_fan_logo.png'
 import playeBanner from '../public/budensliga_player_banner.png'
 import playerCards from '../public/player_cards.png'
 import phonelinks from '../public/phone_links.jpg';
+import mPic1 from '../public/mobile_eg1.jpg'
+import mPic2 from '../public/mobile_eg2.jpg'
+import mPic3 from '../public/mobile_eg3.jpg'
 
 const Home: NextPage = () => {
   return (
@@ -48,7 +51,7 @@ const Home: NextPage = () => {
           <Image
             src={playerCards}
             width={400}
-            height={150}
+            height={160}
             alt=''/>
         </div>
       </div>
@@ -85,6 +88,23 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
+      </div>
+
+      <div className='mx-auto max-w-7xl pt-4'>
+        <div className='grid grid-cols-3 gap-4'>
+          <div className='font-light bg-white'>
+            <div>Recruit new players for your team each week.</div>
+            <Image src={mPic1} width={300} height={420} alt=''/>
+          </div>
+          <div className='font-light bg-white'>
+            <div>Choose your own starting 11 for the next matches.</div>
+            <Image src={mPic2} width={300} height={420} alt=''/>
+          </div>
+          <div className='font-light bg-white'>
+            <div>Earn points after each matchday and win great prizes.</div>
+            <Image src={mPic3} width={300} height={420} alt=''/>
+          </div>
+        </div>
       </div>
     </div>
   )
