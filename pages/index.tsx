@@ -9,6 +9,8 @@ import mPic1 from '../public/mobile_eg1.jpg'
 import mPic2 from '../public/mobile_eg2.jpg'
 import mPic3 from '../public/mobile_eg3.jpg'
 
+//todo: center phone image and text section
+
 const Home: NextPage = () => {
   return (
     <div className='bg-gray-100 p-4 pt-20'>
@@ -90,7 +92,7 @@ const Home: NextPage = () => {
           </div>
       </div>
 
-      <div className='mx-auto max-w-7xl pt-4'>
+      <div className='mx-auto max-w-7xl pt-2'>
         <div className='grid grid-cols-3 gap-4'>
           <div className='font-light bg-white'>
             <div>Recruit new players for your team each week.</div>
