@@ -38,7 +38,7 @@ function footer() {
                ))}
             </div>
          </div>
-         <div className='flex justify-center items-center bg-gray-800 py-2 md:py-1 h-16'>
+         <div className='flex justify-center items-center bg-black py-2 md:py-1 h-16'>
             <div className='text-sm font-normal text-gray-400'>
                © 2022 DFL Deutsche Fußball Liga GmbH
             </div>
