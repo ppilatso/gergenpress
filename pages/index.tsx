@@ -5,6 +5,12 @@ import topLogo from '../public/bundeliga_fan_logo.png'
 import playeBanner from '../public/budensliga_player_banner.png'
 import playerCards from '../public/player_cards.png'
 import phonelinks from '../public/phone_links.jpg';
+import mPic1 from '../public/mobile_eg1.jpg'
+import mPic2 from '../public/mobile_eg2.jpg'
+import mPic3 from '../public/mobile_eg3.jpg'
+import banner from '../public/red_banner.jpg'
+
+//todo: center phone image and text section
 
 const Home: NextPage = () => {
   return (
@@ -48,7 +54,7 @@ const Home: NextPage = () => {
           <Image
             src={playerCards}
             width={400}
-            height={150}
+            height={160}
             alt=''/>
         </div>
       </div>
@@ -86,6 +92,51 @@ const Home: NextPage = () => {
             </div>
           </div>
       </div>
+
+      <div className='mx-auto max-w-7xl pt-2'>
+        <div className='grid grid-cols-3 gap-4'>
+          <div className='flex font-light bg-white'>
+            <div className='mx-auto'>
+              <div>Recruit new players for your team each week.</div>
+              <Image src={mPic1} width={300} height={420} alt=''/>
+            </div>
+          </div>
+          <div className='flex font-light bg-white'>
+            <div className='mx-auto'>
+              <div>Choose your own starting 11 for the next matches.</div>
+              <Image src={mPic2} width={300} height={420} alt=''/>
+            </div>
+          </div>
+          <div className='flex font-light bg-white'>
+            <div className='mx-auto'>
+              <div>Earn points after each matchday and win great prizes.</div>
+              <Image src={mPic3} width={300} height={420} alt=''/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='relative mx-auto max-w-7xl pt-6'>
+        <div>
+          <Image className='p-2' src={banner} width={1300} height={150} alt='' />
+          <div className='absolute left-80 bottom-16 text-5xl font-extrabold text-white'>
+            <div className='flex pt-8'>
+              Free in stores
+              <div className='px-8'>
+                <a className='text-xs font-bold bg-black text-white hover:underline hover:text-gray-300 outline-2 p-3' >
+                  APP STORE
+                </a>
+                <span className='px-4'></span>
+                <a className='text-xs font-bold bg-black text-white hover:underline hover:text-gray-300 outline-2 p-3'>
+                  GOOGLE PLAY
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   )
 }
